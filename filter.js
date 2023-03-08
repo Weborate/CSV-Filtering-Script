@@ -7,6 +7,11 @@ const filename = args[0];
 const searchString = args[1].toLowerCase();
 const outputFile = filename.replace('.csv', '_filtered.csv');
 
+// Save user from losing the original file when replace failed and outputFile == input file
+if (filename == outputFile) {
+  throw "The input file is not a CSV"
+}
+
 // Create the readline interface for reading the input file
 const rl = readline.createInterface({
   input: fs.createReadStream(filename),
