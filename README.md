@@ -29,8 +29,6 @@ The output file has the same format as the input file: one line of data per row,
 
 Suppose you have a CSV file called `data.csv` with the following contents:
 
-css
-
 ```
 Name,Age,Gender
 John,25,Male
@@ -40,9 +38,9 @@ Mark,20,Male
 
 If you want to filter out any lines that do not contain the string "Male", you can run the script using the following command:
 
-python
-
-`node filter-csv.js female` 
+```
+node filter.js myfile.csv female female2 "Female with spaces"
+```
 
 The script will create a new file called `output.csv` with the following contents:
 
